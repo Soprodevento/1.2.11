@@ -1,19 +1,16 @@
-import java.util.Scanner;
+// Могу так же сделать со сканнером.
+// по тестам программа проходит. Если с не равно сумме a + b => false
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите переменную a");
-        double a = scanner.nextDouble();
-        System.out.println("Введите переменную b");
-        double b = scanner.nextDouble();
-        System.out.println("Введите переменную c");
-        double c = scanner.nextDouble();
+        double a = 10;
+        double b = 20;
+        double c = 30;
         boolean result = doubleExpression(a, b, c);
         System.out.println("Результат: " + result);
     }
 
     public static boolean doubleExpression(double a, double b, double c) {
-        return a + b == c;
+        return Math.abs(a + b - c) < 0.000001;
     }
 }
